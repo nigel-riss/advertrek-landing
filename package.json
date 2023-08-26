@@ -1,0 +1,21 @@
+{
+  "name": "advertrek-landing",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Landing page for Advertrek company",
+  "main": "index.js",
+  "repository": "git@github.com:nigel-riss/advertrek-landing.git",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Yuriy Kurenkov",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.66.1"
+  }
+}
