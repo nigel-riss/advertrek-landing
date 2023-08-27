@@ -2,6 +2,7 @@
 import path         from 'path';
 import gulp         from 'gulp';
 import pug          from 'gulp-pug';
+import embedSVG     from 'gulp-embed-svg';
 import server       from 'browser-sync';
 import dartSass     from 'sass';
 import gulpSass     from 'gulp-sass';
@@ -60,6 +61,13 @@ const renderPug = () => gulp
     pretty: true,
     data: {},
     self: true,
+  }))
+  .on(`error`, (err) => {
+    console.log("\x1b[31m", err.message, "\x1b[0m");
+    this.emit(`end`);
+  })
+  .pipe(embedSVG({
+    root: `./src/`,
   }))
   .on(`error`, (err) => {
     console.log("\x1b[31m", err.message, "\x1b[0m");
