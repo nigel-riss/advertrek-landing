@@ -3,21 +3,22 @@ header.header
     a.logo
       img(src="./img/logo.svg", alt="logo")
     nav.main-nav 
-      ul.main-menu 
-        li.main-menu__item 
-          span.main-menu__active Home
-        li.main-menu__item 
-          a.main-menu__link(href="#") Advertisers
-        li.main-menu__item 
-          a.main-menu__link(href="#") Publishers
-        li.main-menu__item 
-          a.main-menu__link(href="#") Login
-        li.main-menu__item 
-          a.main-menu__link(href="#") Sign up
+      .main-nav__menu
+        ul.main-menu 
+          li.main-menu__item 
+            span.main-menu__active Home
+          li.main-menu__item 
+            a.main-menu__link(href="#") Advertisers
+          li.main-menu__item 
+            a.main-menu__link(href="#") Publishers
+          li.main-menu__item 
+            a.main-menu__link(href="#") Login
+          li.main-menu__item 
+            a.main-menu__link(href="#") Sign up
       .main-nav__contacts 
         a.social(href="#") Skype 
         a.social(href="#") Telegram 
-        a(href="mailto:contact@advertrek") contact@advertrek
+        a.email(href="mailto:contact@advertrek") contact@advertrek
     button.menu-button Menu
   .header__content
     .header__caption
