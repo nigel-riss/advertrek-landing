@@ -1,8 +1,9 @@
 html {
   // typography
   font-family: var(--mainFont);
-}
+  font-size: 5vw;
 
-h1 {
-  font-weight: 500;
+  // visual
+  background-color:  var(--white);
+  scroll-behavior: smooth;
 }
