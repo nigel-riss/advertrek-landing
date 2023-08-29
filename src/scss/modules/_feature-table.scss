@@ -2,14 +2,43 @@
 
 }
 
-.feature-table__number {
+.feature-table tr {
+  // box model
+  display: block;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  
+  // border
+  border-top: 1px solid var(--blue);
+}
 
+.feature-table td {
+  // box model
+  display: block;
+}
+
+.feature-table__number {
+  // box model
+  margin-bottom: 0.5rem;
+
+  // typography
+  color: var(--red);
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.225;
 }
 
 .feature-table__feature {
+  // box model
+  margin-bottom: 2rem;
 
+  // typography
+  color: var(--blue);
+  font-size: 1.5rem;
+  line-height: 1.225;
 }
 
 .feature-table__text {
-
+  // typography
+  line-height: 1.225;
 }

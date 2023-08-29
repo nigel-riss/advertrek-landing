@@ -1,11 +1,71 @@
 .gradient-card {
+  // positioning
+  position: relative;
+  z-index: 2;
 
+  // box model
+  margin-bottom: 1.5rem;
+  padding: 1.75rem;
+
+  // typography
+  color: var(--blue);
+}
+
+.gradient-card::before {
+  content: "";
+
+  // positioning
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: -2;
+
+  // box model
+  display: block;
+
+  // border
+  border-radius: 1.5rem;
+
+  // visual
+  background-image: conic-gradient(from 26deg at 50% -10%, #FFDBF0 0%, #FF3B77 10%, #1F3281 57%);
+  overflow: hidden;
+}
+
+.gradient-card::after {
+  content: "";
+
+  // positioning
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  // box model
+  display: block;
+
+  // border
+  border-radius: calc(1.5rem - 2px);
+
+  // visual
+  background-color: var(--lightBlue);
+  overflow: hidden;
 }
 
 .gradient-card__title {
+  // box model
+  margin-bottom: 1rem;
 
+  // typography
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .gradient-card__text {
 
 }
+
+// https://css-tricks.com/my-struggle-to-use-and-animate-a-conic-gradient-in-svg/

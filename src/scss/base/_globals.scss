@@ -1,9 +1,15 @@
 html {
   // typography
+  color: var(--dark);
   font-family: var(--mainFont);
-  font-size: 5vw;
+  font-size: 4.44445vw;
 
   // visual
   background-color:  var(--white);
   scroll-behavior: smooth;
+}
+
+body {
+  // box model
+  padding: 0.625rem;
 }

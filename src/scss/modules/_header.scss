@@ -1,9 +1,22 @@
 .header {
+  // box model
+  padding: 1.25rem;
 
+  // border
+  border-radius: 1.75rem;
+
+  // visual
+  background-color: var(--red);
 }
 
 .header__top {
+  // positioning
+  position: relative;
 
+  // box model
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__content {

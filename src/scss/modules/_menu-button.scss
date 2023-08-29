@@ -1,3 +1,16 @@
 .menu-button {
-  
+  // box model
+  padding: 0.625rem 2rem;
+
+  // border
+  border: none;
+  border-radius: 2.5rem;
+
+  // typography
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.1875;
+
+  // visual
+  background-color: #ffffffb2;
 }

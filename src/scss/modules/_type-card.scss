@@ -1,5 +1,15 @@
 .type-card {
+  // box model
+  padding: 1.75rem;
 
+  // typography
+  color: var(--blue);
+
+  // border
+  border-radius: 1.25rem;
+
+  // visual
+  background-color: var(--lightBlue);
 }
 
 .type-card__image {
@@ -15,7 +25,12 @@
 }
 
 .type-card__title {
+  // box model
+  margin-bottom: 1rem;
 
+  // typography
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .type-card__text {
