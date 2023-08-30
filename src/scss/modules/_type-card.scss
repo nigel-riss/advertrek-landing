@@ -1,7 +1,14 @@
 .type-card {
+  // positioning
+  position: relative;
+
   // box model
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   margin-bottom: 1.25rem;
   padding: 1.75rem;
+  height: 24rem;
 
   // typography
   color: var(--blue);
@@ -14,8 +21,38 @@
 }
 
 .type-card__image {
+  // positioning
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
 
+  // box model
+  width: 8rem;
 }
+
+// .type-card__image::before {
+//   // content: "";
+
+//   // positioning
+//   position: absolute;
+//   z-index: -1;
+
+//   // box model
+//   display: block;
+//   height: 4.25rem;
+//   width: 5.875rem;
+
+//   // border
+//   border-radius: 1rem;
+
+//   // visual
+//   background-color: var(--red);
+//   background-image: conic-gradient(from -90deg at 50.46% 0.00%, #FFDBF0 78.0003172159195deg, #ff3b77 180.8186993598938deg, #1F3281 350.0191140174866deg);
+//   box-shadow:
+//     -1px -1px 2px 0px rgba(31, 50, 129, 0.25) inset,
+//     10px 10px 20px 0px rgba(31, 50, 129, 0.40);
+// }
 
 .type-card__image img {
 
