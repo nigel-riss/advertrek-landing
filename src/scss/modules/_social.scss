@@ -1,7 +1,13 @@
 .social {
+  // box model
+  display: block;
+  height: 2.25rem;
 
+  // typography
+  font-size: 0;
 }
 
 .social svg {
-
+  // box model
+  height: 100%;
 }

@@ -1,16 +1,65 @@
 .main-nav {
   // positioning
   position: absolute;
+  right: 0;
+  top: 0;
+
+  // box model
+  padding: 2.5rem;
+  padding-top: 7.25rem;
+  width: 100%;
+
+  // border
+  border-radius: 1.25rem;
 
   // visual
-  display: none;
   background-color: var(--white);
+  // opacity: 0.25;
+}
+
+.main-nav__close {
+  // positioning
+  position: absolute;
+  right: 1.25rem;
+  top: 1rem;
+
+  // box model
+  display: flex;
+
+  // typography
+  line-height: 1;
+
+  // border
+  border: none;
+
+  // visual
+  appearance: none;
+  background-color: transparent;
+}
+
+.main-nav__close-x {
+  // box model
+  margin-left: 0.25rem;
+
+  // typography
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .main-nav__menu {
-  
+  // box model
+  margin-bottom: 4rem;
 }
 
 .main-nav__contacts {
+  // box model
+  display: flex;
+  flex-direction: column-reverse;
+}
 
+.main-nav__social {
+  // box model
+  display: flex;
+  gap: 1.375rem;
+  margin-top: 1rem;
 }

@@ -1,9 +1,13 @@
 .main-menu {
-
+  // box model
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .main-menu__item {
-
+  // typography
+  font-size: 1rem;
 }
 
 .main-menu__active {
@@ -11,9 +15,15 @@
 }
 
 .main-menu__link {
-
+  // typography
+  color: var(--dark);
+  text-decoration: none;
 }
 
 .main-menu__separator {
+  // box model
+  height: 1px;
 
+  // visual
+  background-color: var(--blue);
 }

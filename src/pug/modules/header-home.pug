@@ -3,6 +3,7 @@ header.header
     a.logo
       img(src="./img/logo.svg", alt="logo")
     nav.main-nav 
+      button.main-nav__close Close <span class="main-nav__close-x">✕</span>
       .main-nav__menu
         ul.main-menu 
           li.main-menu__item 
@@ -11,14 +12,21 @@ header.header
             a.main-menu__link(href="#") Advertisers
           li.main-menu__item 
             a.main-menu__link(href="#") Publishers
+          li.main-menu__item
+            .main-menu__separator 
           li.main-menu__item 
             a.main-menu__link(href="#") Login
           li.main-menu__item 
             a.main-menu__link(href="#") Sign up
+          li.main-menu__item
+            .main-menu__separator 
       .main-nav__contacts 
-        a.social(href="#") Skype 
-        a.social(href="#") Telegram 
-        a.email(href="mailto:contact@advertrek") contact@advertrek
+        .main-nav__social
+          a.social(href="#") Skype 
+            img(src="./img/icons/skype.svg", alt="Skype Icon")
+          a.social(href="#") Telegram 
+            img(src="./img/icons/telegram.svg", alt="Telegram Icon")
+        a.email(href="mailto:contact@advertrek.com") contact@advertrek.com
     button.menu-button Menu
   .header__content
     .header__caption
