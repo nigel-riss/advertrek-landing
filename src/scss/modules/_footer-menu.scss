@@ -1,0 +1,16 @@
+.footer-menu {
+  // box model
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-menu__item {
+
+}
+
+.footer-menu__link {
+  // typography
+  color: var(--white);
+  text-decoration: none;
+}

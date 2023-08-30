@@ -1,7 +1,11 @@
 .feature-card {
   // box model
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 1.25rem;
   padding: 1.75rem;
+  height: 24rem;
 
   // border
   border-radius: 1.25rem;
@@ -24,5 +28,6 @@
 }
 
 .feature-card__text {
-
+  // typography
+  line-height: 1.225;
 }

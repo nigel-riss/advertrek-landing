@@ -8,8 +8,24 @@
 
   // visual
   background-color: var(--red);
-  background-image: conic-gradient(from -90deg at 50.46% 0.00%, #FFDBF0 78.0003172159195deg, #ff3b77 180.8186993598938deg, #1F3281 350.0191140174866deg);
+  // background-image: conic-gradient(from -90deg at 50.46% 0.00%, #FFDBF0 78.0003172159195deg, #ff3b77 180.8186993598938deg, #1F3281 350.0191140174866deg);
+  background-image: radial-gradient(75% 75% at 60% -1%, #eb4d79 0%, #24327DD9 100%),radial-gradient(75% 75% at -50% 67%, #eb4e78 0%, #23327CC4 100%),linear-gradient(0deg, #eb4e78 0%, #EA3A69FF 100%);
+  background-size: 200% 150%;
+  animation: gradient 10s ease infinite;
+  animation-direction: alternate;
 }
+
+@keyframes gradient {
+  0% {
+   background-position: 0% 100%;
+  }
+  50% {
+   background-position: 100% 50%;
+  }
+  100% {
+   background-position: 0% 50%;
+  }
+ }
 
 .header__top {
   // positioning
