@@ -1,7 +1,20 @@
 .promo {
+  // box model
+  margin-bottom: 6rem;
+  padding: 1.75rem;
 
+  // border
+  border-radius: 1.25rem;
+
+  // visual
+  background-color: var(--red);
+  background-image: conic-gradient(from -90deg at 50.46% 0.00%, #FFDBF0 78.0003172159195deg, #ff3b77 180.8186993598938deg, #1F3281 350.0191140174866deg);
 }
 
 .promo__title {
-
+  // typography
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.225;
 }

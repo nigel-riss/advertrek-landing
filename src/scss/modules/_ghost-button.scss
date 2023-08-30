@@ -1,5 +1,17 @@
 .ghost-button {
+  // box model
+  padding: 0.75rem 2rem;
 
+  // border
+  border: 0.125rem solid var(--white);
+  border-radius: 2rem;
+
+  // typography
+  color: var(--white);
+  font-size: 1.5rem;
+  line-height: 1.225;
+  text-align: center;
+  text-decoration: none;
 }
 
 .ghost-button:hover {

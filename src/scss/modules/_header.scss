@@ -1,5 +1,6 @@
 .header {
   // box model
+  margin-bottom: 3rem;
   padding: 1.25rem;
 
   // border
@@ -7,6 +8,7 @@
 
   // visual
   background-color: var(--red);
+  background-image: conic-gradient(from -90deg at 50.46% 0.00%, #FFDBF0 78.0003172159195deg, #ff3b77 180.8186993598938deg, #1F3281 350.0191140174866deg);
 }
 
 .header__top {
@@ -17,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 18rem;
 }
 
 .header__content {
@@ -24,9 +27,14 @@
 }
 
 .header__caption {
-
+  // box model
+  margin-bottom: 1.875rem;
 }
 
 .header__buttons {
-  
+  // box model
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.625rem;
 }

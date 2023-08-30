@@ -1,5 +1,6 @@
 .type-card {
   // box model
+  margin-bottom: 1.25rem;
   padding: 1.75rem;
 
   // typography
@@ -31,6 +32,7 @@
   // typography
   font-size: 1.25rem;
   font-weight: 500;
+  line-height: 1.225;
 }
 
 .type-card__text {
