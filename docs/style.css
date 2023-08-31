@@ -153,8 +153,12 @@ body {
   font-display: swap;
 }
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 3rem;
   padding: 1.25rem;
+  aspect-ratio: 9/16;
   border-radius: 1.75rem;
   background-color: var(--red);
   background-image: radial-gradient(75% 75% at 60% -1%, #eb4d79 0%, rgba(36, 50, 125, 0.8509803922) 100%), radial-gradient(75% 75% at -50% 67%, #eb4e78 0%, rgba(35, 50, 124, 0.768627451) 100%), linear-gradient(0deg, #eb4e78 0%, #ea3a69 100%);
@@ -190,7 +194,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18rem;
+  margin-bottom: 6rem;
 }
 
 @media (min-width: 600px) {
@@ -440,6 +444,19 @@ ul.main-menu {
   }
 }
 
+.main-subtitle {
+  margin-top: 1rem;
+  color: var(--white);
+  font-family: var(--titleFont);
+  font-weight: 300;
+}
+@media (min-width: 1200px) {
+  .main-subtitle {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
 .ghost-button {
   padding: 0.75rem 2rem;
   border: 0.125rem solid var(--white);
@@ -637,13 +654,13 @@ ul.main-menu {
 }
 
 .gradient-card__title {
-  margin-bottom: 1rem;
   font-family: var(--titleFont);
   font-size: 1.5rem;
   font-weight: 400;
 }
 
 .gradient-card__text {
+  margin-top: 1rem;
   line-height: 1.225;
 }
 
@@ -907,6 +924,14 @@ ul.main-menu {
     display: grid;
     grid-template-columns: repeat(2, 21rem);
     grid-template-areas: "one three" "two three";
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .step-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 21rem);
     gap: 1.25rem;
   }
 }

@@ -1,7 +1,11 @@
 .header {
   // box model
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 3rem;
   padding: 1.25rem;
+  aspect-ratio: 9/16;
 
   // border
   border-radius: 1.75rem;
@@ -46,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18rem;
+  margin-bottom: 6rem;
 }
 
 .header__content {

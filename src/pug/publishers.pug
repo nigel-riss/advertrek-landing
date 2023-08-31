@@ -7,8 +7,14 @@ html(lang="en")
     title Advertrek — Publishers
   body 
     include ./modules/header-publishers.pug
-    include ./modules/we-offer.pug
-    include ./modules/how-to-start.pug
-    include ./modules/benefits-publishers.pug
-    include ./modules/payout-methods.pug
+
+    main
+      include ./modules/we-offer.pug
+      include ./modules/how-to-start.pug
+      include ./modules/benefits-publishers.pug
+      include ./modules/payout-methods.pug
+      include ./modules/footer-inner.pug
+
     include ./modules/footer-inner.pug
+
+    script(src="./app.js") 

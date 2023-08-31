@@ -80,10 +80,11 @@
   overflow: hidden;
 }
 
-.gradient-card__title {
-  // box model
-  margin-bottom: 1rem;
+.gradient-card__number {
 
+}
+
+.gradient-card__title {
   // typography
   font-family: var(--titleFont);
   font-size: 1.5rem;
@@ -91,6 +92,9 @@
 }
 
 .gradient-card__text {
+  // box model
+  margin-top: 1rem;
+
   // typography
   line-height: 1.225;
 }
