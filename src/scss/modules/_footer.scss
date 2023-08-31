@@ -8,25 +8,48 @@
 
   // visual
   background-color: var(--blue);
+
+  @include atDesktopS {
+    // box model
+    margin: -1.25rem;
+    padding: 6.25rem 3.75rem;
+  }
 }
 
 .footer__top {
-
+  @include atDesktopS {
+    // box model
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer__logo {
   // box model
   margin-bottom: 3rem;
+
+  @include atDesktopS {
+    // box model
+    flex-basis: 20rem;
+  }
 }
 
 .footer__menues {
   // box model
   margin-bottom: 3rem;
+
+  @include atDesktopS {
+    // box model
+    flex-grow: 10;
+    // display: flex;
+  }
 }
 
 .footer__contacts {
-  // box model
-  margin-bottom: 3rem;
+  @include atDesktopS {
+    // box model
+    flex-basis: 15rem;
+  }
 
   .email {
     // typography
@@ -59,9 +82,22 @@
   // box model
   display: flex;
   flex-direction: column-reverse;
+
+  @include atDesktopS {
+    // box model
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer__copy {
   // box model
   margin-top: 1rem;
+}
+
+.footer__menu {
+  @include atDesktopS {
+    // box model
+    flex-basis: 15rem;
+  }
 }

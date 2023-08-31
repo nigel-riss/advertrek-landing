@@ -5,6 +5,11 @@
 
   // typography
   font-size: 0;
+
+  @include atDesktopS {
+    // box model
+    height: 1.5rem;
+  }
 }
 
 .social svg {
