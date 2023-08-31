@@ -6,6 +6,8 @@ import embedSVG     from 'gulp-embed-svg';
 import server       from 'browser-sync';
 import dartSass     from 'sass';
 import gulpSass     from 'gulp-sass';
+import webpack      from 'webpack-stream';
+import { dir } from 'console';
 
 
 // Variables
@@ -29,10 +31,34 @@ const dirs = {
   // Resources
   images:       `./src/img/**/*`,
   fonts:        `./src/fonts/**/*`,
+  favicon:      `./src/favicon/**/*`,
 
   // Distribution
   public:       `./docs`,
 }
+
+
+// Webpack Config
+const webpackConfig = {
+  entry: {
+    app: `./src/js/app.js`,
+  },
+  output: {
+    filename: `[name].js`,
+    path: path.resolve(__dirname, dirs.public),
+  },
+  mode: `development`,
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: `babel-loader`,
+      },
+    ],
+  },
+  devtool: `source-map`,
+};
 
 
 // Start BrowserSync Server
@@ -82,6 +108,7 @@ const copyAssets = () => gulp
   .src([
     dirs.images,
     dirs.fonts,
+    dirs.favicon,
   ], {
     base: `./src`,
   })
@@ -97,13 +124,27 @@ const compileStyles = () => gulp
   .pipe(server.stream());
 
 
+// Compile Scripts
+const compileScripts = () => gulp
+  .src(dirs.jsSrc)
+  .pipe(webpack(webpackConfig))
+  .on(`error`, (err) => {
+    console.log("\x1b[31m", err.message, "\x1b[0m");
+    this.emit(`end`);
+  })
+  .pipe(gulp.dest(dirs.public))
+  .pipe(server.stream());
+
+
 // Exports
 export const watch = () => {
   gulp.watch(dirs.pugAll, renderPug);
   gulp.watch(dirs.scssAll, compileStyles);
+  gulp.watch(dirs.jsSrc, compileScripts);
   gulp.watch([
     dirs.images,
     dirs.fonts,
+    dirs.favicon,
   ], copyAssets);
 };
 
@@ -111,6 +152,7 @@ export default gulp.series(
   gulp.parallel(
     renderPug,
     compileStyles,
+    compileScripts,
     copyAssets,
   ),
   gulp.parallel(

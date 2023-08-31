@@ -3,9 +3,10 @@
   position: absolute;
   right: 0;
   top: 0;
+  transform-origin: top right;
+  transform: scale(0);
 
   // box model
-  display: none;
   padding: 2.5rem;
   padding-top: 7.25rem;
   width: 100%;
@@ -15,7 +16,17 @@
 
   // visual
   background-color: var(--white);
-  // opacity: 0.25;
+  opacity: 0.25;
+  overflow: hidden;
+  transition: all 0.25s ease-out;
+
+  &.open {
+    // positioning
+    transform: scale(1);
+
+    // visual
+    opacity: 1;
+  }
 }
 
 .main-nav__close {

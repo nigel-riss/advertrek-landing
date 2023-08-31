@@ -12,11 +12,16 @@
   "author": "Yuriy Kurenkov",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/preset-env": "^7.22.14",
+    "babel-loader": "^9.1.3",
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "gulp-embed-svg": "^1.4.8",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "webpack": "^5.88.2",
+    "webpack-stream": "^7.0.0"
   }
 }
