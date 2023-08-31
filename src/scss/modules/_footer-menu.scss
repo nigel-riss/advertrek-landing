@@ -5,6 +5,13 @@
   gap: 1rem;
 }
 
+.footer-menu--d-row {
+  @include atDesktopS {
+    // box model
+    flex-direction: row;
+  }
+}
+
 .footer-menu__item {
 
 }
