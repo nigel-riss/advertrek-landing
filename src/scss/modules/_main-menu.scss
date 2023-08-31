@@ -1,20 +1,49 @@
-.main-menu {
+ul.main-menu {
   // box model
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @include atDesktopS {
+    // box model
+    flex-direction: row;
+    padding: 0.3125rem;
+    gap: 0;
+
+    // border
+    border-radius: 1.25rem;
+
+    // visual
+    background-color: #ffffffb2;
+  }
 }
 
 .main-menu__item {
   // typography
   font-size: 1rem;
+  line-height: 1.1875;
 }
 
 .main-menu__active {
+  // box model
+  display: block;
+  padding: 0.3125rem 1rem;
 
+  // border
+  border-radius: 0.9375rem;
+
+  // typography
+  color: var(--white);
+
+  // visual
+  background-color: var(--blue);
 }
 
 .main-menu__link {
+  // box model
+  display: block;
+  padding: 0.3125rem 1rem;
+
   // typography
   color: var(--dark);
   text-decoration: none;
@@ -26,4 +55,9 @@
 
   // visual
   background-color: var(--blue);
+
+  @include atDesktopS {
+    // box model
+    display: none;
+  }
 }

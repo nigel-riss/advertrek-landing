@@ -2,4 +2,9 @@
   // typography
   color: var(--blue);
   text-decoration: none;
+
+  @include atDesktopS {
+    // box model
+    color: var(--white);
+  }
 }

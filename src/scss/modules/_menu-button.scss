@@ -13,4 +13,9 @@
 
   // visual
   background-color: #ffffffb2;
+
+  @include atDesktopS {
+    // box model
+    display: none;
+  }
 }

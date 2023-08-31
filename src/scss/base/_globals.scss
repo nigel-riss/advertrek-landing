@@ -7,9 +7,24 @@ html {
   // visual
   background-color:  var(--white);
   scroll-behavior: smooth;
+
+  @include atTablet {
+    // typography
+    font-size: 2.66665vw;
+  }
+
+  @include atDesktopS {
+    // typography
+    font-size: 1.1112vw;
+  }
 }
 
 body {
   // box model
   padding: 0.625rem;
+
+  @include atDesktopS {
+    // box model
+    padding: 1.25rem;
+  }
 }

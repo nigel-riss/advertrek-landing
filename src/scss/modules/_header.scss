@@ -13,6 +13,16 @@
   background-size: 200% 150%;
   animation: gradient 10s ease infinite;
   animation-direction: alternate;
+
+  @include atDesktopS {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem;
+    padding-top: 1.25rem;
+    aspect-ratio: 16/9;
+  }
 }
 
 @keyframes gradient {
@@ -39,12 +49,22 @@
 }
 
 .header__content {
-
+  @include atTablet {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
 .header__caption {
   // box model
   margin-bottom: 1.875rem;
+
+  @include atTablet {
+    // box model
+    margin-bottom: 0;
+  }
 }
 
 .header__buttons {
@@ -53,4 +73,10 @@
   flex-direction: column;
   align-items: stretch;
   gap: 0.625rem;
+
+  @include atDesktopS {
+    // box model
+    flex-direction: row;
+    gap: 1.25rem;
+  }
 }
