@@ -1,0 +1,11 @@
+.roles-cards {
+  @include atDesktopS {
+    // box model
+    display: grid;
+    grid-template-columns: repeat(2, 21rem);
+    grid-template-areas:
+      "one three"
+      "two three";
+    gap: 1.25rem;
+  }
+}

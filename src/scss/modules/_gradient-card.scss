@@ -9,6 +9,31 @@
 
   // typography
   color: var(--blue);
+
+  @include atDesktopS {
+    // box model
+    margin-bottom: 0;
+    padding: 2.25rem;
+  }
+}
+
+@include atDesktopS {
+  .gradient-card--1 {
+    // box model
+    grid-area: one;
+  }
+
+  .gradient-card--2 {
+    // box model
+    grid-area: two;
+  }
+
+  .gradient-card--3 {
+    // box model
+    padding-top: 9.5rem;
+    grid-area: three;
+    align-self: center;
+  }
 }
 
 .gradient-card::before {

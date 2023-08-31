@@ -18,6 +18,18 @@
 
   // visual
   background-color: var(--lightBlue);
+
+  @include atDesktopS {
+    // box model
+    margin-bottom: 0;
+  }
+}
+
+.type-card:nth-of-type(3n + 2) {
+  @include atDesktopS {
+    // box model
+    margin-top: -2rem;
+  }
 }
 
 .type-card__image {

@@ -21,32 +21,40 @@ ul.main-menu {
 .main-menu__item {
   // typography
   font-size: 1rem;
-  line-height: 1.1875;
+
+  @include atDesktopS {
+    // typography
+    line-height: 1.1875;
+  }
 }
 
 .main-menu__active {
-  // box model
-  display: block;
-  padding: 0.3125rem 1rem;
-
-  // border
-  border-radius: 0.9375rem;
-
-  // typography
-  color: var(--white);
-
-  // visual
-  background-color: var(--blue);
+  @include atDesktopS {
+    // box model
+    display: block;
+    padding: 0.3125rem 1rem;
+  
+    // border
+    border-radius: 0.9375rem;
+  
+    // typography
+    color: var(--white);
+  
+    // visual
+    background-color: var(--blue);
+  }
 }
 
 .main-menu__link {
-  // box model
-  display: block;
-  padding: 0.3125rem 1rem;
-
   // typography
   color: var(--dark);
   text-decoration: none;
+
+  @include atDesktopS {
+    // box model
+    display: block;
+    padding: 0.3125rem 1rem;
+  }
 }
 
 .main-menu__separator {

@@ -1,6 +1,19 @@
 .section {
   // box model
   margin-bottom: 6rem;
+
+  @include atDesktopS {
+    // box model
+    padding-left: 2.5rem;
+  }
+}
+
+.section--flex {
+  @include atDesktopS {
+    // box model
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .section--blue {
@@ -13,6 +26,12 @@
 
   // visual
   background-color: var(--lightBlue);
+
+  @include atDesktopS {
+    // box model
+    padding: 2.5rem;
+    padding-bottom: 8rem;
+  }
 }
 
 .section__header {
@@ -21,5 +40,8 @@
 }
 
 .section__content {
-
+  @include atDesktopS {
+    // box model
+    padding-top: 8rem;
+  }
 }
