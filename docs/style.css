@@ -442,6 +442,7 @@ ul.main-menu {
 }
 @media (min-width: 1200px) {
   .section {
+    margin-bottom: 8rem;
     padding-left: 2.5rem;
   }
 }
@@ -468,6 +469,11 @@ ul.main-menu {
 
 .section__header {
   margin-bottom: 2rem;
+}
+@media (min-width: 1200px) {
+  .section__header {
+    flex-basis: 25rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -594,7 +600,20 @@ ul.main-menu {
   padding: 1.75rem;
   border-radius: 1.25rem;
   background-color: var(--red);
-  background-image: conic-gradient(from -90deg at 50.46% 0%, #FFDBF0 78.0003172159deg, #ff3b77 180.8186993599deg, #1F3281 350.0191140175deg);
+  background-image: conic-gradient(from -90deg at 75% 0%, #FFDBF0 78.0003172159deg, #ff3b77 180.8186993599deg, #1F3281 350.0191140175deg);
+}
+@media (min-width: 1200px) {
+  .promo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2.5rem;
+    padding-top: 8rem;
+    width: 72rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    margin-top: -12rem;
+  }
 }
 
 .promo__title {
@@ -603,6 +622,13 @@ ul.main-menu {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.225;
+}
+@media (min-width: 1200px) {
+  .promo__title {
+    margin-bottom: 0;
+    font-size: 3rem;
+    font-weight: 500;
+  }
 }
 
 .promo__buttons {
@@ -616,6 +642,11 @@ ul.main-menu {
   padding: 1rem 0;
   border-top: 1px solid var(--blue);
 }
+@media (min-width: 1200px) {
+  .feature-table tr {
+    display: flex;
+  }
+}
 
 .feature-table td {
   display: block;
@@ -628,6 +659,12 @@ ul.main-menu {
   font-weight: 500;
   line-height: 1.225;
 }
+@media (min-width: 1200px) {
+  .feature-table__number {
+    padding-left: 8.5rem;
+    padding-right: 19rem;
+  }
+}
 
 .feature-table__feature {
   margin-bottom: 2rem;
@@ -635,9 +672,21 @@ ul.main-menu {
   font-size: 1.5rem;
   line-height: 1.225;
 }
+@media (min-width: 1200px) {
+  .feature-table__feature {
+    flex-basis: 21rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+}
 
 .feature-table__text {
   line-height: 1.225;
+}
+@media (min-width: 1200px) {
+  .feature-table__text {
+    padding-right: 7.5rem;
+  }
 }
 
 .feature-card {
@@ -650,6 +699,17 @@ ul.main-menu {
   border-radius: 1.25rem;
   color: var(--blue);
   background-color: var(--lightBlue);
+}
+@media (min-width: 1200px) {
+  .feature-card {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature-card:nth-of-type(2n) {
+    margin-top: -2rem;
+  }
 }
 
 .feature-card__title {
@@ -730,6 +790,15 @@ ul.main-menu {
 
 @media (min-width: 1200px) {
   .roles-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 21rem);
+    grid-template-areas: "one three" "two three";
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature-cards {
     display: grid;
     grid-template-columns: repeat(2, 21rem);
     grid-template-areas: "one three" "two three";
