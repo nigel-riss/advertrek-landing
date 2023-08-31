@@ -10,6 +10,11 @@
   
   // border
   border-top: 1px solid var(--blue);
+  
+  @include atDesktopS {
+    // box model
+    display: flex;
+  }
 }
 
 .feature-table td {
@@ -26,6 +31,12 @@
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.225;
+
+  @include atDesktopS {
+    // box model
+    padding-left: 8.5rem;
+    padding-right: 19rem;
+  }
 }
 
 .feature-table__feature {
@@ -36,9 +47,21 @@
   color: var(--blue);
   font-size: 1.5rem;
   line-height: 1.225;
+
+  @include atDesktopS {
+    // box model
+    flex-basis: 21rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
 }
 
 .feature-table__text {
   // typography
   line-height: 1.225;
+
+  @include atDesktopS {
+    // box model
+    padding-right: 7.5rem;
+  }
 }

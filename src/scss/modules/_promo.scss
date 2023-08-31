@@ -9,7 +9,21 @@
 
   // visual
   background-color: var(--red);
-  background-image: conic-gradient(from -90deg at 50.46% 0.00%, #FFDBF0 78.0003172159195deg, #ff3b77 180.8186993598938deg, #1F3281 350.0191140174866deg);
+  background-image: conic-gradient(from -90deg at 75% 0.00%, #FFDBF0 78.0003172159195deg, #ff3b77 180.8186993598938deg, #1F3281 350.0191140174866deg);
+
+  @include atDesktopS {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2.5rem;
+    padding-top: 8rem;
+
+    // box model
+    width: 72rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    margin-top: -12rem;
+  }
 }
 
 .promo__title {
@@ -21,6 +35,15 @@
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.225;
+
+  @include atDesktopS {
+    // box model
+    margin-bottom: 0;
+
+    // typography
+    font-size: 3rem;
+    font-weight: 500;
+  }
 }
 
 .promo__buttons {
