@@ -52,3 +52,10 @@
     padding-top: 8rem;
   }
 }
+
+.section__content--np {
+  @include atDesktopS {
+    // box model
+    padding-top: 1.5rem;
+  }
+}

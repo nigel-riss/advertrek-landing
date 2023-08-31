@@ -253,7 +253,7 @@ body {
     transform: scale(1);
     display: flex;
     align-items: center;
-    gap: 12rem;
+    gap: 10rem;
     width: auto;
     padding: 0;
     border-radius: 0;
@@ -453,7 +453,7 @@ ul.main-menu {
 }
 
 .cta-button {
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 2.25rem;
   border: 0.125rem solid var(--white);
   border-radius: 2rem;
   color: var(--blue);
@@ -509,6 +509,12 @@ ul.main-menu {
 @media (min-width: 1200px) {
   .section__content {
     padding-top: 8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section__content--np {
+    padding-top: 1.5rem;
   }
 }
 
@@ -659,7 +665,7 @@ ul.main-menu {
     width: 72rem;
     margin: 0 auto;
     margin-bottom: 8rem;
-    margin-top: -12rem;
+    margin-top: -13rem;
   }
 }
 
@@ -693,6 +699,8 @@ ul.main-menu {
 @media (min-width: 1200px) {
   .feature-table tr {
     display: flex;
+    margin-bottom: 0;
+    padding: 1.5rem 0;
   }
 }
 
@@ -703,26 +711,29 @@ ul.main-menu {
 .feature-table__number {
   margin-bottom: 0.5rem;
   color: var(--red);
+  font-family: var(--titleFont);
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.225;
 }
 @media (min-width: 1200px) {
   .feature-table__number {
-    padding-left: 8.5rem;
-    padding-right: 19rem;
+    flex-basis: 26rem;
+    flex-shrink: 0;
+    padding-left: 5rem;
   }
 }
 
 .feature-table__feature {
   margin-bottom: 2rem;
   color: var(--blue);
+  font-family: var(--titleFont);
   font-size: 1.5rem;
   line-height: 1.225;
 }
 @media (min-width: 1200px) {
   .feature-table__feature {
-    flex-basis: 21rem;
+    flex-basis: 30rem;
     flex-shrink: 0;
     flex-grow: 0;
   }
@@ -751,6 +762,7 @@ ul.main-menu {
 @media (min-width: 1200px) {
   .feature-card {
     margin-bottom: 0;
+    padding: 2.25rem;
   }
 }
 
@@ -762,6 +774,7 @@ ul.main-menu {
 
 .feature-card__title {
   margin-bottom: 1rem;
+  font-family: var(--titleFont);
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.225;
@@ -829,6 +842,7 @@ ul.main-menu {
 
 .footer__title {
   margin-bottom: 1rem;
+  font-family: var(--titleFont);
   font-size: 1.5rem;
   font-weight: 400;
 }

@@ -14,6 +14,8 @@
   @include atDesktopS {
     // box model
     display: flex;
+    margin-bottom: 0;
+    padding: 1.5rem 0;
   }
 }
 
@@ -28,14 +30,16 @@
 
   // typography
   color: var(--red);
+  font-family: var(--titleFont);
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.225;
 
   @include atDesktopS {
     // box model
-    padding-left: 8.5rem;
-    padding-right: 19rem;
+    flex-basis: 26rem;
+    flex-shrink: 0;
+    padding-left: 5rem;
   }
 }
 
@@ -45,12 +49,13 @@
 
   // typography
   color: var(--blue);
+  font-family: var(--titleFont);
   font-size: 1.5rem;
   line-height: 1.225;
 
   @include atDesktopS {
     // box model
-    flex-basis: 21rem;
+    flex-basis: 30rem;
     flex-shrink: 0;
     flex-grow: 0;
   }
