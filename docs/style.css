@@ -71,7 +71,19 @@ select {
   --red: #ff3b77;
   --blue: #1f3281;
   --dark: #0a1029;
-  --mainFont: REM,
+  --mainFont: "Work Sans",
+                  system-ui,
+                  -apple-system,
+                  BlinkMacSystemFont,
+                  "Segoe UI",
+                  Roboto,
+                  Oxygen,
+                  Ubuntu,
+                  Cantarell,
+                  "Open Sans",
+                  "Helvetica Neue",
+                  sans-serif;
+  --titleFont: REM,
                   system-ui,
                   -apple-system,
                   BlinkMacSystemFont,
@@ -112,6 +124,13 @@ body {
   }
 }
 
+@font-face {
+  font-family: "Work Sans";
+  src: url("./fonts/WorkSans-Regular.woff2") format("woff2"), url("./fonts/WorkSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: "REM";
   src: url("./fonts/REM-Light.woff2") format("woff2"), url("./fonts/REM-Light.woff") format("woff");
@@ -338,6 +357,7 @@ ul.main-menu {
   .main-menu__active {
     display: block;
     padding: 0.3125rem 1rem;
+    padding-bottom: 0.375rem;
     border-radius: 0.9375rem;
     color: var(--white);
     background-color: var(--blue);
@@ -352,6 +372,7 @@ ul.main-menu {
   .main-menu__link {
     display: block;
     padding: 0.3125rem 1rem;
+    padding-bottom: 0.375rem;
   }
 }
 
@@ -369,6 +390,11 @@ ul.main-menu {
   display: block;
   height: 2.25rem;
   font-size: 0;
+}
+@media (min-width: 1200px) {
+  .social {
+    height: 1.5rem;
+  }
 }
 
 .social svg {
@@ -402,6 +428,7 @@ ul.main-menu {
 
 .main-title {
   color: var(--white);
+  font-family: var(--titleFont);
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.225;
@@ -418,6 +445,7 @@ ul.main-menu {
   border: 0.125rem solid var(--white);
   border-radius: 2rem;
   color: var(--white);
+  font-family: var(--titleFont);
   font-size: 1.5rem;
   line-height: 1.225;
   text-align: center;
@@ -429,6 +457,7 @@ ul.main-menu {
   border: 0.125rem solid var(--white);
   border-radius: 2rem;
   color: var(--blue);
+  font-family: var(--titleFont);
   font-size: 1.5rem;
   line-height: 1.225;
   text-align: center;
@@ -464,6 +493,7 @@ ul.main-menu {
   .section--blue {
     padding: 2.5rem;
     padding-bottom: 8rem;
+    padding-right: 7.375rem;
   }
 }
 
@@ -484,6 +514,7 @@ ul.main-menu {
 
 .title {
   color: var(--blue);
+  font-family: var(--titleFont);
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.225;
@@ -528,8 +559,19 @@ ul.main-menu {
 
 .type-card__title {
   margin-bottom: 1rem;
+  font-family: var(--titleFont);
   font-size: 1.25rem;
   font-weight: 500;
+  line-height: 1.225;
+}
+@media (min-width: 1200px) {
+  .type-card__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.type-card__text {
   line-height: 1.225;
 }
 
@@ -590,8 +632,13 @@ ul.main-menu {
 
 .gradient-card__title {
   margin-bottom: 1rem;
+  font-family: var(--titleFont);
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.gradient-card__text {
+  line-height: 1.225;
 }
 
 .promo {
@@ -619,6 +666,7 @@ ul.main-menu {
 .promo__title {
   margin-bottom: 8rem;
   color: var(--white);
+  font-family: var(--titleFont);
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.225;
@@ -729,17 +777,42 @@ ul.main-menu {
   color: var(--white);
   background-color: var(--blue);
 }
+@media (min-width: 1200px) {
+  .footer {
+    margin: -1.25rem;
+    padding: 6.25rem 3.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .footer__logo {
   margin-bottom: 3rem;
+}
+@media (min-width: 1200px) {
+  .footer__logo {
+    flex-basis: 20rem;
+  }
 }
 
 .footer__menues {
   margin-bottom: 3rem;
 }
+@media (min-width: 1200px) {
+  .footer__menues {
+    flex-grow: 10;
+  }
+}
 
-.footer__contacts {
-  margin-bottom: 3rem;
+@media (min-width: 1200px) {
+  .footer__contacts {
+    flex-basis: 15rem;
+  }
 }
 .footer__contacts .email {
   color: var(--white);
@@ -764,15 +837,33 @@ ul.main-menu {
   display: flex;
   flex-direction: column-reverse;
 }
+@media (min-width: 1200px) {
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 .footer__copy {
   margin-top: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .footer__menu {
+    flex-basis: 15rem;
+  }
 }
 
 .footer-menu {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .footer-menu--d-row {
+    flex-direction: row;
+  }
 }
 
 .footer-menu__link {
