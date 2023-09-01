@@ -124,10 +124,6 @@ body {
   }
 }
 
-[data-entrance] {
-  visibility: hidden;
-}
-
 @font-face {
   font-family: "Work Sans";
   src: url("./fonts/WorkSans-Regular.woff2") format("woff2"), url("./fonts/WorkSans-Regular.woff") format("woff");
@@ -233,7 +229,7 @@ body {
 
 .logo {
   display: block;
-  width: 10rem;
+  max-width: 10rem;
   opacity: 1;
   transition: all 0.25s ease-out;
 }
@@ -1037,6 +1033,12 @@ ul.main-menu {
 .footer-menu__link {
   color: var(--white);
   text-decoration: none;
+  opacity: 1;
+  transition: all 0.25s ease-out;
+}
+
+.footer-menu__link:hover {
+  opacity: 0.5;
 }
 
 @media (min-width: 1200px) {
