@@ -42,6 +42,7 @@ const dirs = {
 const webpackConfig = {
   entry: {
     app: `./src/js/app.js`,
+    scroll: `./src/js/scroll.js`,
   },
   output: {
     filename: `[name].js`,

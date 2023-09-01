@@ -6,9 +6,20 @@
   // typography
   font-size: 0;
 
+  // visual
+  opacity: 1;
+  transition: all 0.25s ease-out;
+
   @include atDesktopS {
     // box model
     height: 1.5rem;
+  }
+}
+
+.social:hover {
+  @media (hover: hover) {
+    // visual
+    opacity: 0.5;
   }
 }
 

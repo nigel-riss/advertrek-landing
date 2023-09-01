@@ -3,8 +3,17 @@
   color: var(--blue);
   text-decoration: none;
 
+  // visual
+  opacity: 1;
+  transition: all 0.25s ease-out;
+
   @include atDesktopS {
     // box model
     color: var(--white);
   }
+}
+
+.email:hover {
+  // visual
+  opacity: 0.5;
 }

@@ -20,4 +20,16 @@
   // typography
   color: var(--white);
   text-decoration: none;
+
+  // visual
+  opacity: 1;
+  transition: all 0.25s ease-out;
+}
+
+.footer-menu__link:hover {
+  // typography
+  // text-decoration: underline;
+
+  // visual
+  opacity: 0.5;
 }
