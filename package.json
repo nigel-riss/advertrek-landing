@@ -25,6 +25,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.6.0"
+    "@glidejs/glide": "^3.6.0",
+    "scroll-entrance": "^1.0.0"
   }
 }

@@ -124,6 +124,10 @@ body {
   }
 }
 
+[data-entrance] {
+  visibility: hidden;
+}
+
 @font-face {
   font-family: "Work Sans";
   src: url("./fonts/WorkSans-Regular.woff2") format("woff2"), url("./fonts/WorkSans-Regular.woff") format("woff");
@@ -250,6 +254,7 @@ body {
   top: 0;
   transform-origin: top right;
   transform: scale(0);
+  z-index: 3;
   padding: 2.5rem;
   padding-top: 7.25rem;
   width: 100%;
