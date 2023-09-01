@@ -367,12 +367,13 @@ ul.main-menu {
 
 @media (min-width: 1200px) {
   .main-menu__active {
+    position: relative;
+    z-index: 2;
     display: block;
     padding: 0.3125rem 1rem;
-    border-radius: 0.9375rem;
     color: var(--white);
-    background-color: var(--blue);
     user-select: none;
+    transition: all 0.25s ease-out;
   }
 }
 
@@ -391,30 +392,9 @@ ul.main-menu {
 }
 
 @media (min-width: 1200px) {
-  .main-menu__link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 0;
-    border-radius: 0.9375rem;
-    background-color: var(--blue);
-    transition: all 0.25s ease-out;
-  }
-}
-
-@media (min-width: 1200px) {
   .main-menu__link:hover {
     color: var(--white);
   }
-}
-
-.main-menu__link:hover::before {
-  left: 0;
-  right: auto;
-  width: 100%;
 }
 
 .main-menu__separator {
@@ -427,14 +407,37 @@ ul.main-menu {
   }
 }
 
+.main-menu__tracker {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .main-menu__tracker {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    border-radius: 0.9375rem;
+    height: 1.875rem;
+    background-color: var(--blue);
+    transition: all 0.25s ease-out;
+  }
+}
+
 .social {
   display: block;
   height: 2.25rem;
   font-size: 0;
+  opacity: 1;
+  transition: all 0.25s ease-out;
 }
 @media (min-width: 1200px) {
   .social {
     height: 1.5rem;
+  }
+}
+
+@media (hover: hover) {
+  .social:hover {
+    opacity: 0.5;
   }
 }
 
@@ -445,11 +448,17 @@ ul.main-menu {
 .email {
   color: var(--blue);
   text-decoration: none;
+  opacity: 1;
+  transition: all 0.25s ease-out;
 }
 @media (min-width: 1200px) {
   .email {
     color: var(--white);
   }
+}
+
+.email:hover {
+  opacity: 0.5;
 }
 
 .menu-button {

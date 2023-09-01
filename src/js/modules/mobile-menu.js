@@ -1,4 +1,4 @@
-export default class Menu {
+export default class MobileMenu {
   constructor() {
     this.nav = document.getElementById(`main-nav`);
     this.menuButton = document.getElementById(`menu-button`);

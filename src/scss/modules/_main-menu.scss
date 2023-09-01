@@ -30,20 +30,21 @@ ul.main-menu {
 
 .main-menu__active {
   @include atDesktopS {
+    // positioning
+    position: relative;
+    z-index: 2;
+
     // box model
     display: block;
     padding: 0.3125rem 1rem;
     // padding-bottom: 0.375rem;
   
-    // border
-    border-radius: 0.9375rem;
-  
     // typography
     color: var(--white);
   
     // visual
-    background-color: var(--blue);
     user-select: none;
+    transition: all 0.25s ease-out;
   }
 }
 
@@ -67,43 +68,11 @@ ul.main-menu {
   }
 }
 
-.main-menu__link::before {
-  @include atDesktopS {
-    content: "";
-
-    // positioning
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-
-    // box model
-    height: 100%;
-    width: 0;
-
-    // border
-    border-radius: 0.9375rem;
-
-    // visual
-    background-color: var(--blue);
-    transition: all 0.25s ease-out;
-  }
-}
-
 .main-menu__link:hover {
   @include atDesktopS {
     // typography
     color: var(--white);
   }
-}
-
-.main-menu__link:hover::before {
-  // positioning
-  left: 0;
-  right: auto;
-
-  // box model
-  width: 100%;
 }
 
 .main-menu__separator {
@@ -116,5 +85,27 @@ ul.main-menu {
   @include atDesktopS {
     // box model
     display: none;
+  }
+}
+
+.main-menu__tracker {
+  // box model
+  display: none;
+
+  @include atDesktopS {
+    // positioning
+    position: absolute;
+    z-index: 1;
+
+    // box model
+    display: block;
+
+    // border
+    border-radius: 0.9375rem;
+
+    // visual
+    height: 1.875rem;
+    background-color: var(--blue);
+    transition: all 0.25s ease-out;
   }
 }
