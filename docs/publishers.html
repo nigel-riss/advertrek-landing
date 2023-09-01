@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="./scroll.js"> </script><link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png?v=adv">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png?v=adv">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png?v=adv">
+<link rel="manifest" href="./favicon/site.webmanifest?v=adv">
+<link rel="mask-icon" href="./favicon/safari-pinned-tab.svg?v=adv" color="#1f3281">
+<link rel="shortcut icon" href="./favicon/favicon.ico?v=adv">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="./favicon/browserconfig.xml?v=adv">
+<meta name="theme-color" content="#1f3281">
     <title>Advertrek — Publishers</title>
-  </link></meta></meta></head>
+  </meta></meta></meta></link></link></link></link></link></link></link></meta></meta></head>
   <body> 
     <header class="header">
       <div class="header__top"><a class="logo" href="./index.html"> <svg viewBox="0 0 155 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="logo">
@@ -32,13 +41,13 @@
         <nav class="main-nav" id="main-nav"> 
           <button class="main-nav__close" id="close-button">Close <span class="main-nav__close-x">✕</span></button>
           <div class="main-nav__menu">
-            <ul class="main-menu"> 
+            <ul class="main-menu" id="main-menu"> 
               <li class="main-menu__item"> <a class="main-menu__link" href="./index.html">Home</a></li>
               <li class="main-menu__item"> <a class="main-menu__link" href="./advertisers.html">Advertisers</a></li>
               <li class="main-menu__item"> <span class="main-menu__active">Publishers</span></li>
               <li class="main-menu__separator"> </li>
-              <li class="main-menu__item"> <a class="main-menu__link" href="#">Login</a></li>
-              <li class="main-menu__item"> <a class="main-menu__link" href="#">Sign up</a></li>
+              <li class="main-menu__item"> <a class="main-menu__link" href="https://admin.advertrek.com/login">Login</a></li>
+              <li class="main-menu__item"> <a class="main-menu__link" href="https://admin.advertrek.com/signup/getting-started">Sign up</a></li>
               <li class="main-menu__separator"> </li>
             </ul>
           </div>
@@ -64,47 +73,47 @@
     </header>
     <main>
       <section class="section section--flex"> 
-        <header class="section__header"> 
+        <header class="section__header" data-entrance="from-left" data-entrance-delay="50"> 
           <h2 class="title">What <br/>we offer </h2>
         </header>
         <div class="section__content"> 
           <div class="types-cards">
-            <article class="type-card"> 
+            <article class="type-card" data-entrance="from-bottom" data-entrance-delay="100"> 
               <div class="type-card__image"><img src="./img/cards/video.png" alt="video icon"/></div>
               <div class="type-card__content"> 
                 <h3 class="type-card__title">01 Video</h3>
                 <p class="type-card__text">Video ads effortlessly blend into desktop and mobile players, providing an appealing choice for advertisers and publishers alike. This format drives millions of impressions daily, guaranteeing prolonged viewer involvement.</p>
               </div>
             </article>
-            <article class="type-card"> 
+            <article class="type-card" data-entrance="from-bottom" data-entrance-delay="350"> 
               <div class="type-card__image"><img src="./img/cards/banner.png" alt="banner icon"/></div>
               <div class="type-card__content"> 
                 <h3 class="type-card__title">02 Banner</h3>
                 <p class="type-card__text">Banner advertising, the oldest form of online advertising, is highly effective. Banners, typically images or GIF files with specific dimensions, are placed on websites, mobile sites, and blogs owned by publishers. They commonly achieve higher click-through rates on desktop and mobile devices.</p>
               </div>
             </article>
-            <article class="type-card"> 
+            <article class="type-card" data-entrance="from-bottom" data-entrance-delay="600"> 
               <div class="type-card__image"><img src="./img/cards/pop.png" alt="pop icon"/></div>
               <div class="type-card__content"> 
                 <h3 class="type-card__title">03 Pop</h3>
                 <p class="type-card__text">Popunder ads are designed to appear behind the main browser window, capturing the user's attention without interrupting their browsing experience.</p>
               </div>
             </article>
-            <article class="type-card"> 
+            <article class="type-card" data-entrance="from-bottom" data-entrance-delay="100"> 
               <div class="type-card__image"><img src="./img/cards/in-page.png" alt="in-page icon"/></div>
               <div class="type-card__content"> 
                 <h3 class="type-card__title">04 In-page</h3>
                 <p class="type-card__text">In-page ads are a type of online advertising that appear within web pages, integrated with the content, instead of being separate. They work well across different browsers and platforms, with a particular effectiveness on iOS devices.</p>
               </div>
             </article>
-            <article class="type-card"> 
+            <article class="type-card" data-entrance="from-bottom" data-entrance-delay="350"> 
               <div class="type-card__image"><img src="./img/cards/push.png" alt="push icon"/></div>
               <div class="type-card__content"> 
                 <h3 class="type-card__title">05 Push</h3>
                 <p class="type-card__text">A push notification is an advertising format where a message is delivered to a user's device after they have given consent to subscribe. These notifications appear prominently on the screen, above other windows, and have a strong user loyalty towards offers.</p>
               </div>
             </article>
-            <article class="type-card"> 
+            <article class="type-card" data-entrance="from-bottom" data-entrance-delay="600"> 
               <div class="type-card__image"><img src="./img/cards/native.png" alt="native icon"/></div>
               <div class="type-card__content"> 
                 <h3 class="type-card__title">06 Native</h3>
@@ -116,24 +125,24 @@
       </section>
       <section class="section section--blue section--flex"> 
         <header class="section__header">
-          <h2 class="title">How <br/>to start?</h2>
-          <p class="subtitle">Are you the proud owner of a website, blog, or services? If you've ever pondered earning from online advertising or affiliate marketing, look no further! Welcome to Advertrek, the ad network designed with publishers in mind. Join our community of trusted webmasters and affiliates who are already enjoying the benefits of high CPMs and unlocking their earning potential</p>
+          <h2 class="title" data-entrance="from-left" data-entrance-delay="50">How <br/>to start?</h2>
+          <p class="subtitle" data-entrance="from-left" data-entrance-delay="250">Are you the proud owner of a website, blog, or services? If you've ever pondered earning from online advertising or affiliate marketing, look no further! Welcome to Advertrek, the ad network designed with publishers in mind. Join our community of trusted webmasters and affiliates who are already enjoying the benefits of high CPMs and unlocking their earning potential</p>
         </header>
         <div class="section__content"> 
           <div class="step-cards">
-            <article class="gradient-card"> 
+            <article class="gradient-card" data-entrance="from-bottom"> 
               <p class="gradient-card__number">#1</p>
               <h3 class="gradient-card__title">Create Account</h3>
             </article>
-            <article class="gradient-card gradient-card--mt"> 
+            <article class="gradient-card gradient-card--mt" data-entrance="from-bottom" data-entrance-delay="250"> 
               <p class="gradient-card__number">#2</p>
               <h3 class="gradient-card__title">Choose the Ad format</h3>
             </article>
-            <article class="gradient-card"> 
+            <article class="gradient-card" data-entrance="from-bottom"> 
               <p class="gradient-card__number">#3</p>
               <h3 class="gradient-card__title">Add the code to&nbsp;your website or&nbsp;different source</h3>
             </article>
-            <article class="gradient-card gradient-card--mt"> 
+            <article class="gradient-card gradient-card--mt" data-entrance="from-bottom" data-entrance-delay="250"> 
               <p class="gradient-card__number">#4</p>
               <h3 class="gradient-card__title">Start Making Money</h3>
             </article>
@@ -141,37 +150,37 @@
         </div>
       </section>
       <section class="section"> 
-        <header class="section__header"> 
+        <header class="section__header" data-entrance="from-left" data-entrance-delay="50"> 
           <h2 class="title">Benefits for <br/>publishers</h2>
         </header>
         <div class="section__content section__content--np"> 
           <table class="feature-table"> 
-            <tr> 
+            <tr data-entrance="from-right"> 
               <td class="feature-table__number">#1</td>
               <td class="feature-table__feature">Revshare 85%</td>
               <td class="feature-table__text">With Advertrek, publishers can enjoy an impressive 85% revenue share. We believe in empowering our publishers by providing them with a significant share of the revenue generated through their valuable traffic. It's our way of saying, "Let's grow together and reap the rewards!"</td>
             </tr>
-            <tr> 
+            <tr data-entrance="from-right"> 
               <td class="feature-table__number">#2</td>
               <td class="feature-table__feature">Accept All Kinds of Traffic</td>
               <td class="feature-table__text">So, whether you've got traffic from Mars or traffic from your grandma's knitting blog, we're here to turn it into monetization magic. Trust us, we've seen it all, and we're ready for your traffic adventures.</td>
             </tr>
-            <tr> 
+            <tr data-entrance="from-right"> 
               <td class="feature-table__number">#3</td>
               <td class="feature-table__feature">Impressive eCPM</td>
               <td class="feature-table__text">We pride ourselves on providing publishers with competitive eCPMs that maximize their revenue potential. With our advanced optimization techniques and premium ad inventory, you can expect to see your eCPMs soar to new heights.</td>
             </tr>
-            <tr> 
+            <tr data-entrance="from-right"> 
               <td class="feature-table__number">#4</td>
               <td class="feature-table__feature">Partner Care</td>
               <td class="feature-table__text">Whether you're stuck in an ad optimization maze, lost in a payment process puzzle, or experiencing a technical glitch rollercoaster, fear not! We're armed with witty jokes and a vast knowledge of all things ad-related, ready to tackle your questions and turn frowns upside down.</td>
             </tr>
-            <tr> 
+            <tr data-entrance="from-right"> 
               <td class="feature-table__number">#5</td>
               <td class="feature-table__feature">Global </td>
               <td class="feature-table__text">Our network provides you with the opportunity to reach audiences worldwide. From the bustling streets of New York to the tranquil landscapes of Bali, our global coverage ensures that your ads will be seen by users in diverse locations We have already launched 20k ad campaigns globally</td>
             </tr>
-            <tr> 
+            <tr data-entrance="from-right"> 
               <td class="feature-table__number">#6</td>
               <td class="feature-table__feature">Anti-AdBlock</td>
               <td class="feature-table__text">Our cutting-edge technology detects and circumvents ad block software, ensuring that your ads are seen by every visitor to your website. By effectively bypassing ad blockers, we help you maximize your ad revenue and regain control over your monetization efforts</td>
@@ -186,17 +195,17 @@
         </header>
         <div class="section__content">
           <ul class="payments"> 
-            <li class="payments__item"> <img src="./img/payments/wire.png" alt="Wire Transfer"/></li>
-            <li class="payments__item"> <img src="./img/payments/usdt.png" alt="USDT"/></li>
-            <li class="payments__item"> <img src="./img/payments/capitalist.png" alt="Capitalist"/></li>
-            <li class="payments__item"> <img src="./img/payments/paxum.png" alt="Paxum"/></li>
+            <li class="payments__item payments__item--wire" data-entrance="from-bottom" data-entrance-delay="250"> <img src="./img/payments/wire.png" alt="Wire Transfer"/></li>
+            <li class="payments__item" data-entrance="from-bottom" data-entrance-delay="500"> <img src="./img/payments/usdt.png" alt="USDT"/></li>
+            <li class="payments__item" data-entrance="from-bottom" data-entrance-delay="750"> <img src="./img/payments/capitalist.png" alt="Capitalist"/></li>
+            <li class="payments__item" data-entrance="from-bottom" data-entrance-delay="1000"> <img src="./img/payments/paxum.png" alt="Paxum"/></li>
           </ul>
         </div>
       </section>
     </main>
     <footer class="footer"> 
       <div class="footer__top">
-        <div class="footer__logo"><a class="logo"><svg viewBox="0 0 155 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="logo">
+        <div class="footer__logo"><a class="logo" href="./index.html"> <svg viewBox="0 0 155 20" fill="none" xmlns="http://www.w3.org/2000/svg" alt="logo">
   <g>
     <path d="M5.31231 19.9954C4.33043 20.0233 3.35485 19.8285 2.45741 19.4253C1.72297 19.0855 1.09715 18.5452 0.650519 17.8655C0.225372 17.2066 0.00366662 16.4351 0.0135732 15.6488C-0.00294768 14.8564 0.214024 14.077 0.636954 13.4093C1.12179 12.7143 1.80841 12.1884 2.60197 11.9042C3.7292 11.5013 4.9213 11.3157 6.11637 11.3569H9.89277V13.7697H6.56357C5.59688 13.7697 4.93286 13.9293 4.57148 14.2531C4.39791 14.3993 4.25907 14.583 4.16525 14.7906C4.07142 14.9982 4.025 15.2245 4.0294 15.4527C4.02181 15.6984 4.07429 15.9422 4.18223 16.1626C4.29017 16.3829 4.45024 16.573 4.64826 16.7161C5.15202 17.0503 5.74966 17.2104 6.35127 17.1722C7.00229 17.1827 7.64341 17.0106 8.20333 16.675C8.75055 16.3413 9.16941 15.83 9.39137 15.2246L10.0238 17.1448C9.75526 18.0271 9.17274 18.7777 8.38855 19.252C7.44903 19.7773 6.38556 20.0343 5.31231 19.9954ZM9.63981 19.7856V16.9852L9.37783 16.3694V11.3523C9.39875 10.9674 9.33737 10.5824 9.19784 10.2235C9.05832 9.86465 8.84391 9.54031 8.56922 9.27253C8.03619 8.77538 7.21407 8.52908 6.10283 8.52908C5.34473 8.52846 4.59141 8.65009 3.87131 8.88939C3.19764 9.09638 2.56698 9.42559 2.01021 9.86089L0.528545 6.95553C1.3812 6.36714 2.32897 5.93343 3.32924 5.67389C4.41379 5.37225 5.5335 5.21885 6.65844 5.21779C8.82069 5.21779 10.5011 5.73319 11.6997 6.76398C12.8982 7.79476 13.5005 9.40327 13.5066 11.5895V19.7765L9.63981 19.7856Z" fill="white"/>
     <path d="M23.4266 19.9954C22.1637 20.0154 20.9177 19.7009 19.8128 19.0832C18.7468 18.4768 17.8657 17.5871 17.265 16.5108C16.6163 15.3192 16.2921 13.9751 16.3255 12.6157C16.2894 11.2488 16.6136 9.89669 17.265 8.69784C17.8621 7.62115 18.7443 6.73358 19.8128 6.13455C20.9195 5.52142 22.1643 5.20721 23.4266 5.22235C24.5254 5.1959 25.6107 5.47181 26.566 6.02053C27.496 6.58895 28.2259 7.4376 28.653 8.44697C29.1896 9.76469 29.4422 11.1827 29.3938 12.6066C29.4387 14.0233 29.1959 15.4343 28.6801 16.7526C28.2739 17.7659 27.5567 18.6211 26.6338 19.1927C25.6568 19.7495 24.548 20.027 23.4266 19.9954ZM24.1403 16.5838C24.774 16.5892 25.3978 16.4239 25.9472 16.1049C26.4998 15.7801 26.9518 15.3063 27.2527 14.7366C27.5928 14.0834 27.7623 13.3535 27.745 12.6157C27.7654 11.8733 27.5958 11.1381 27.2527 10.4812C26.9495 9.91321 26.498 9.43996 25.9472 9.11289C25.3978 8.79388 24.774 8.62856 24.1403 8.63398C23.4915 8.62284 22.8518 8.78827 22.2882 9.11289C21.7384 9.44124 21.2872 9.91417 20.9827 10.4812C20.6411 11.1386 20.4731 11.8737 20.4949 12.6157C20.4763 13.3531 20.6442 14.083 20.9827 14.7366C21.2849 15.3053 21.7367 15.7788 22.2882 16.1049C22.8518 16.4295 23.4915 16.5949 24.1403 16.5838ZM27.8625 19.7765V16.8438L27.9393 12.5747L27.6773 8.33751V-0.00911713H31.797V19.7765H27.8625Z" fill="white"/>
@@ -224,8 +233,8 @@
               <li class="footer-menu__item"> <a class="footer-menu__link" href="./index.html">Home</a></li>
               <li class="footer-menu__item"> <a class="footer-menu__link" href="./advertisers.html">Advertisers</a></li>
               <li class="footer-menu__item"> <a class="footer-menu__link" href="./publishers.html">Publishers</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Login</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Sign up</a></li>
+              <li class="footer-menu__item"> <a class="footer-menu__link" href="https://admin.advertrek.com/login">Login</a></li>
+              <li class="footer-menu__item"> <a class="footer-menu__link" href="https://admin.advertrek.com/signup/getting-started">Sign up</a></li>
             </ul>
           </div>
           <div class="footer__text"> 

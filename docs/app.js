@@ -3892,17 +3892,63 @@ var Glide = /*#__PURE__*/function (_Core) {
 
 /***/ }),
 
-/***/ "./src/js/modules/menu.js":
-/*!********************************!*\
-  !*** ./src/js/modules/menu.js ***!
-  \********************************/
+/***/ "./src/js/modules/desktop-menu.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/desktop-menu.js ***!
+  \****************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Menu)
+/* harmony export */   "default": () => (/* binding */ DesktopMenu)
 /* harmony export */ });
-class Menu {
+class DesktopMenu {
+  constructor() {
+    this.menu = document.getElementById(`main-menu`);
+    this.activeElement = this.menu.querySelector(`.main-menu__active`);
+    this.tracker = document.createElement(`div`);
+    this.tracker.classList.add(`main-menu__tracker`);
+    this.menu.appendChild(this.tracker);
+    this.addListenters();
+    // this.resetTracker();
+  }
+
+  addListenters() {
+    this.menu.addEventListener(`mousemove`, e => {
+      if (e.target.classList.contains(`main-menu__link`)) {
+        this.tracker.style.left = `${e.target.offsetLeft}px`;
+        this.tracker.style.width = `${e.target.offsetWidth}px`;
+        this.activeElement.style.color = `var(--blue)`;
+      } else {
+        this.resetTracker();
+      }
+    });
+    this.menu.addEventListener(`mouseleave`, e => {
+      this.resetTracker();
+    });
+    document.addEventListener(`DOMContentLoaded`, () => this.resetTracker());
+  }
+  resetTracker() {
+    this.tracker.style.left = `${this.activeElement.offsetLeft}px`;
+    this.tracker.style.width = `${this.activeElement.offsetWidth}px`;
+    this.tracker.style.height = `${this.activeElement.offsetHeight}px`;
+    this.activeElement.style.color = `var(--white)`;
+  }
+}
+
+/***/ }),
+
+/***/ "./src/js/modules/mobile-menu.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/mobile-menu.js ***!
+  \***************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ MobileMenu)
+/* harmony export */ });
+class MobileMenu {
   constructor() {
     this.nav = document.getElementById(`main-nav`);
     this.menuButton = document.getElementById(`menu-button`);
@@ -4016,12 +4062,15 @@ var __webpack_exports__ = {};
   !*** ./src/js/app.js ***!
   \***********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu.js */ "./src/js/modules/menu.js");
-/* harmony import */ var _modules_slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider.js */ "./src/js/modules/slider.js");
+/* harmony import */ var _modules_mobile_menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/mobile-menu.js */ "./src/js/modules/mobile-menu.js");
+/* harmony import */ var _modules_desktop_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/desktop-menu.js */ "./src/js/modules/desktop-menu.js");
+/* harmony import */ var _modules_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider.js */ "./src/js/modules/slider.js");
 
 
-const _menu = new _modules_menu_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
-const _typeSlider = new _modules_slider_js__WEBPACK_IMPORTED_MODULE_1__["default"]('#type-slider');
+
+const _mobileMenu = new _modules_mobile_menu_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
+const _desktopMenu = new _modules_desktop_menu_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const _typeSlider = new _modules_slider_js__WEBPACK_IMPORTED_MODULE_2__["default"]('#type-slider');
 })();
 
 /******/ })()
