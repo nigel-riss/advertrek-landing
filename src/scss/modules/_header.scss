@@ -6,6 +6,7 @@
   margin-bottom: 3rem;
   padding: 1.25rem;
   aspect-ratio: 9/16;
+  // max-height: calc(100vh - 1.25rem);
 
   // border
   border-radius: 1.75rem;
@@ -26,7 +27,8 @@
     margin-bottom: 8rem;
     padding: 2.5rem;
     padding-top: 1.25rem;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/8;
+    // max-height: calc(100vh - 2.5rem);
   }
 }
 
