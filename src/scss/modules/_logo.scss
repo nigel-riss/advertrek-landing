@@ -2,6 +2,20 @@
   // box model
   display: block;
   width: 10rem;
+
+  // visual
+  opacity: 1;
+  transition: all 0.25s ease-out;
+}
+
+.logo:hover {
+  @media (hover: hover) {
+    // positioning
+    // transform: translateY(0.125rem);
+  
+    // visual
+    opacity: 0.5;
+  }
 }
 
 .logo svg {
