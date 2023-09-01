@@ -1,8 +1,30 @@
-.payments {
+ul.payments {
   // box model
   display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  @include atDesktopS {
+    // box model
+    gap: 7.5rem;
+    padding-right: 7.5rem;
+  }
 }
 
 .payments__item {
+  // box model
+  height: 3.3125rem;
+}
 
+.payments__item--wire {
+  // box model
+  height: 4.9375rem;
+}
+
+.payments__item img {
+  // box model
+  height: 100%;
 }

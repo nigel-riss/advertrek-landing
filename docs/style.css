@@ -1075,8 +1075,30 @@ ul.main-menu {
   }
 }
 
-.payments {
+ul.payments {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+@media (min-width: 1200px) {
+  ul.payments {
+    gap: 7.5rem;
+    padding-right: 7.5rem;
+  }
+}
+
+.payments__item {
+  height: 3.3125rem;
+}
+
+.payments__item--wire {
+  height: 4.9375rem;
+}
+
+.payments__item img {
+  height: 100%;
 }
 
 .glide {
