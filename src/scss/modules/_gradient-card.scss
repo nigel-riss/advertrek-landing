@@ -12,6 +12,10 @@
 
   @include atDesktopS {
     // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 18rem;
     margin-bottom: 0;
     padding: 2.25rem;
   }
@@ -33,6 +37,19 @@
     padding-top: 9.5rem;
     grid-area: three;
     align-self: center;
+  }
+  
+  .gradient-card--mt {
+    // box model
+    justify-content: flex-start;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+  }
+
+  .gradient-card--5 {
+    // box model
+    grid-column: 2;
+    justify-content: flex-end;
   }
 }
 
@@ -80,10 +97,15 @@
   overflow: hidden;
 }
 
-.gradient-card__title {
-  // box model
-  margin-bottom: 1rem;
+.gradient-card__number {
+  // typography
+  color: var(--red);
+  font-family: var(--titleFont);
+  font-size: 3rem;
+  font-weight: 500;
+}
 
+.gradient-card__title {
   // typography
   font-family: var(--titleFont);
   font-size: 1.5rem;
@@ -91,6 +113,9 @@
 }
 
 .gradient-card__text {
+  // box model
+  margin-top: 1rem;
+
   // typography
   line-height: 1.225;
 }

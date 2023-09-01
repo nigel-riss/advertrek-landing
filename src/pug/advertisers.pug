@@ -7,8 +7,13 @@ html(lang="en")
     title Advertrek — Advertisers
   body 
     include ./modules/header-advertisers.pug
-    include ./modules/we-offer.pug
-    include ./modules/start-ur-campaign.pug
-    include ./modules/benefits-advertisers.pug
-    include ./modules/how-to-top-up.pug
+
+    main
+      include ./modules/we-offer.pug
+      include ./modules/start-ur-campaign.pug
+      include ./modules/benefits-advertisers.pug
+      include ./modules/how-to-top-up.pug
+
     include ./modules/footer-inner.pug
+
+    script(src="./app.js") 
