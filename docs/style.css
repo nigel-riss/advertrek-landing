@@ -547,6 +547,12 @@ ul.main-menu {
   line-height: 1.225;
 }
 
+.subtitle strong {
+  font-family: var(--titleFont);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
 .type-card {
   position: relative;
   display: flex;
@@ -971,6 +977,10 @@ ul.main-menu {
     grid-template-columns: repeat(2, 21rem);
     gap: 1.25rem;
   }
+}
+
+.payments {
+  display: flex;
 }
 
 .glide {
