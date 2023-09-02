@@ -563,7 +563,7 @@ ul.main-menu {
 
 .ghost-button:hover .ghost-button__deco {
   color: var(--red);
-  transform: rotate(155deg) scale(3);
+  transform: translate(1rem, -1rem) rotate(155deg) scale(3);
 }
 
 .cta-button {
