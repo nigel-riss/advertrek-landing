@@ -8,7 +8,7 @@ export default class DesktopMenu {
     this.menu.appendChild(this.tracker);
 
     this.addListenters();
-    // this.resetTracker();
+    // window.setTimeout(() => this.resetTracker(), 1000);
   }
 
   addListenters() {
@@ -27,6 +27,8 @@ export default class DesktopMenu {
     });
 
     document.addEventListener(`DOMContentLoaded`, () => this.resetTracker());
+    window.addEventListener(`load`, () => this.resetTracker());
+    window.addEventListener(`resize`, () => this.resetTracker());
   }
 
   resetTracker() {

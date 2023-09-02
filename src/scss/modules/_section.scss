@@ -1,4 +1,7 @@
 .section {
+  // positioning
+  position: relative;
+
   // box model
   margin-bottom: 6rem;
 
@@ -14,6 +17,15 @@
     // box model
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.section--flex .section__header {
+  @include atDesktopS {
+    // positioning
+    position: sticky;
+    top: 5rem;
   }
 }
 

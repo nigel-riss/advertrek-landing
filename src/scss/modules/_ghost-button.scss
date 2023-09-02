@@ -22,6 +22,11 @@
   // visual
   appearance: none;
   transition: all 0.25s ease-out;
+
+  @include atDesktopS {
+    // box model
+    display: flex;
+  }
 }
 
 .ghost-button::before {
@@ -78,4 +83,24 @@
     // visual
     box-shadow: none;
   }
+}
+
+.ghost-button__deco {
+  // positioning
+  position: relative;
+  transform: rotate(0deg);
+  transform-origin: center center;
+
+  // box model
+  margin-left: 0.5rem;
+
+  // visual
+  transition: all 0.5s ease-out;
+}
+
+.ghost-button:hover .ghost-button__deco {
+  // positioning
+  color: var(--red);
+  // display: block;
+  transform: rotate(155deg) scale(3);
 }
