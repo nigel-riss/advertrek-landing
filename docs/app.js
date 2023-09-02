@@ -3910,7 +3910,7 @@ class DesktopMenu {
     this.tracker.classList.add(`main-menu__tracker`);
     this.menu.appendChild(this.tracker);
     this.addListenters();
-    // this.resetTracker();
+    // window.setTimeout(() => this.resetTracker(), 1000);
   }
 
   addListenters() {
@@ -3927,6 +3927,8 @@ class DesktopMenu {
       this.resetTracker();
     });
     document.addEventListener(`DOMContentLoaded`, () => this.resetTracker());
+    window.addEventListener(`load`, () => this.resetTracker());
+    window.addEventListener(`resize`, () => this.resetTracker());
   }
   resetTracker() {
     this.tracker.style.left = `${this.activeElement.offsetLeft}px`;
