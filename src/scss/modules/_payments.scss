@@ -7,6 +7,11 @@ ul.payments {
   align-items: center;
   gap: 3rem;
 
+  @include atTablet {
+    // box model
+    gap: 4rem;
+  }
+
   @include atDesktopS {
     // box model
     gap: 7.5rem;

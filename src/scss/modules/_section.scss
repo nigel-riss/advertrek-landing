@@ -32,7 +32,6 @@
 .section--blue {
   // box model
   padding: 1.75rem;
-  padding-bottom: 6rem;
 
   // border
   border-radius: 1.25rem;
@@ -53,6 +52,11 @@
   // box model
   margin-bottom: 2rem;
 
+  @include atTablet {
+    // box model
+    margin-bottom: 3rem;
+  }
+
   @include atDesktopS {
     // box model
     flex-basis: 25rem;
@@ -64,6 +68,11 @@
     // box model
     padding-top: 8rem;
   }
+}
+
+.section__content--t-pb {
+  // box model
+  padding-bottom: 4rem;
 }
 
 .section__content--np {

@@ -21,6 +21,11 @@
   overflow: hidden;
   transition: all 0.25s ease-out;
 
+  @include atTablet {
+    // box model
+    width: 20rem;
+  }
+
   @include atDesktopS {
     // positioning
     position: relative;

@@ -1,11 +1,14 @@
 .feature-cards {
-  @include atDesktopS {
+  @include atTablet {
     // box model
     display: grid;
-    grid-template-columns: repeat(2, 21rem);
-    grid-template-areas:
-      "one three"
-      "two three";
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+    margin-top: 3rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    grid-template-columns: repeat(2, 21rem);
   }
 }

@@ -6,6 +6,10 @@
   font-weight: 300;
   line-height: 1.225;
 
+  @include atTablet {
+    font-size: 1.75rem;
+  }
+
   @include atDesktopS {
     // typography
     font-size: 3rem;
