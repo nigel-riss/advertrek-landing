@@ -1,4 +1,8 @@
 .promo {
+  // positioning
+  position: relative;
+  z-index: 3;
+
   // box model
   margin-bottom: 6rem;
   margin-top: -10rem;
@@ -13,17 +17,23 @@
   background-image: radial-gradient(75% 75% at 60% -1%, #eb4d79 0%, #24327DD9 100%),radial-gradient(75% 75% at -50% 67%, #eb4e78 0%, #23327CC4 100%),linear-gradient(0deg, #eb4e78 0%, #EA3A69FF 100%);
   background-size: 200% 150%;
 
-  @include atDesktopS {
+  @include atTablet {
+    // box model
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 2.5rem;
-    padding-top: 8rem;
-
-    // box model
-    width: 72rem;
     margin: 0 auto;
     margin-bottom: 8rem;
+    margin-top: -9rem;
+    padding: 2.5rem;
+    padding-top: 8rem;
+    width: 35rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    width: 72rem;
+
     margin-top: -13rem;
 
     // visual
@@ -43,13 +53,18 @@
   font-weight: 300;
   line-height: 1.225;
 
-  @include atDesktopS {
+  @include atTablet {
     // box model
     margin-bottom: 0;
 
     // typography
-    font-size: 3rem;
+    font-size: 1.75rem;
     font-weight: 500;
+  }
+  
+  @include atDesktopS {
+    // typography
+    font-size: 3rem;
   }
 }
 

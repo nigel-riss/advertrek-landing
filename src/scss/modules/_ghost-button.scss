@@ -66,13 +66,15 @@
 }
 
 .ghost-button:hover::before {
-  // positioning
-  left: 0;
-  right: auto;
+  @media (hover: hover) {
+    // positioning
+    left: 0;
+    right: auto;
 
-  // box model
-  width: 100%;
-  opacity: 1;
+    // box model
+    width: 100%;
+    opacity: 1;
+  }
 }
 
 .ghost-button:active {
@@ -99,8 +101,11 @@
 }
 
 .ghost-button:hover .ghost-button__deco {
-  // positioning
-  color: var(--red);
-  // display: block;
-  transform: translate(1rem, -1rem) rotate(155deg) scale(3);
+  @media (hover: hover) {
+    // positioning
+    color: var(--red);
+  
+    // display: block;
+    transform: translate(1rem, -1rem) rotate(155deg) scale(3);
+  }
 }

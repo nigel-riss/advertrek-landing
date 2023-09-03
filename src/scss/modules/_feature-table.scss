@@ -10,6 +10,16 @@
   
   // border
   border-top: 1px solid var(--blue);
+
+  @include atTablet {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 4rem 1fr;
+    grid-template-areas:
+      "number heading"
+      "text text";
+    gap: 1rem;
+  }
   
   @include atDesktopS {
     // box model
@@ -35,6 +45,11 @@
   font-weight: 500;
   line-height: 1.225;
 
+  @include atTablet {
+    // box model
+    margin-bottom: 0;
+  }
+
   @include atDesktopS {
     // box model
     flex-basis: 26rem;
@@ -53,17 +68,33 @@
   font-size: 1.5rem;
   line-height: 1.225;
 
+  @include atTablet {
+    // box model
+    margin-bottom: 0;
+
+    // typography
+    font-size: 1.25rem;
+  }
+
   @include atDesktopS {
     // box model
     flex-basis: 30rem;
     flex-shrink: 0;
     flex-grow: 0;
+
+    // typography
+    font-size: 1.5rem;
   }
 }
 
 .feature-table__text {
   // typography
   line-height: 1.225;
+
+  @include atTablet {
+    // box model
+    grid-area: text;
+  }
 
   @include atDesktopS {
     // box model

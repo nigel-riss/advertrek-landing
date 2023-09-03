@@ -1,5 +1,6 @@
 
 (function() {
+  if (window && window.innerWidth < 1000) return;
 
   //Create the object for the entrance plugin
   const entrance = {};

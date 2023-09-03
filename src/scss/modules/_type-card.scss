@@ -19,9 +19,20 @@
   // visual
   background-color: var(--lightBlue);
 
-  @include atDesktopS {
+  @include atTablet {
     // box model
     margin-bottom: 0;
+  }
+}
+
+.type-card:nth-of-type(2n) {
+  @include atTablet {
+    // box model
+    margin-top: -2rem;
+  }
+
+  @include atDesktopS {
+    margin-top: 0;
   }
 }
 

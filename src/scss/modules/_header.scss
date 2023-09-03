@@ -17,6 +17,11 @@
   background-image: radial-gradient(75% 75% at 60% -1%, #eb4d79 0%, #24327DD9 100%),radial-gradient(75% 75% at -50% 67%, #eb4e78 0%, #23327CC4 100%),linear-gradient(0deg, #eb4e78 0%, #EA3A69FF 100%);
   background-size: 200% 150%;
 
+  @include atTablet {
+    // box model
+    aspect-ratio: 1/1;
+  }
+
   @include atDesktopS {
     // box model
     display: flex;
@@ -32,6 +37,13 @@
     animation: gradient 10s ease infinite;
     animation-direction: alternate;
   }
+
+  @include atDesktopL {
+    // box model
+    max-width: 1800px;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+  }
 }
 
 .header__top {
@@ -42,7 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
 }
 
 .header__content {

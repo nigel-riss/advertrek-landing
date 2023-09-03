@@ -10,7 +10,7 @@
   // typography
   color: var(--blue);
 
-  @include atDesktopS {
+  @include atTablet {
     // box model
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
   }
 }
 
-@include atDesktopS {
+@include atTablet {
   .gradient-card--1 {
     // box model
     grid-area: one;

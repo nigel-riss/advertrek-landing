@@ -1,8 +1,15 @@
 .step-cards {
-  @include atDesktopS {
+  @include atTablet {
     // box model
     display: grid;
-    grid-template-columns: repeat(2, 21rem);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+    padding-top: 2rem;
+    margin-bottom: -2rem;
+  }
+  
+  @include atDesktopS {
+    // box model
+    grid-template-columns: repeat(2, 21rem);
   }
 }
