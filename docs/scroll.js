@@ -22,6 +22,8 @@ var __webpack_exports__ = {};
   \**************************/
 __webpack_require__.r(__webpack_exports__);
 (function () {
+  if (window && window.innerWidth < 1000) return;
+
   //Create the object for the entrance plugin
   const entrance = {};
 
