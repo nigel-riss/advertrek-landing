@@ -1,4 +1,8 @@
 .promo {
+  // positioning
+  position: relative;
+  z-index: 3;
+
   // box model
   margin-bottom: 6rem;
   margin-top: -10rem;
