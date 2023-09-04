@@ -1,0 +1,24 @@
+.glide {
+  @include atTablet {
+    // box model
+    display: none;
+  }
+}
+
+.glide__bullets {
+  // positioning
+  bottom: -2rem;
+}
+
+.glide__bullet {
+  box-shadow: none;
+
+  // visual
+  background-color: var(--lightBlue);
+  opacity: 1;
+}
+
+.glide__bullet--active {
+  // visual
+  background-color: var(--blue);
+}

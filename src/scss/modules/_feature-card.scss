@@ -5,7 +5,6 @@
   justify-content: space-between;
   margin-bottom: 1.25rem;
   padding: 1.75rem;
-  height: 24rem;
 
   // border
   border-radius: 1.25rem;
@@ -19,6 +18,7 @@
   @include atTablet {
     // box model
     margin-bottom: 0;
+    height: 24rem;
   }
 
   @include atDesktopS {
@@ -36,7 +36,7 @@
 
 .feature-card__title {
   // box model
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   // typography
   font-family: var(--titleFont);

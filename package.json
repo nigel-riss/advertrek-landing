@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.6.0",
-    "scroll-entrance": "^1.0.0"
+    "scroll-entrance": "^1.0.0",
+    "swiper": "^10.2.0"
   }
 }

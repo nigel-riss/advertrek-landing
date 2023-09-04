@@ -1,4 +1,7 @@
 .types-cards {
+  // box model
+  display: none;
+
   @include atTablet {
     // box model
     display: grid;
