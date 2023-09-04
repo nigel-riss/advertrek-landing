@@ -3978,33 +3978,6 @@ class MobileMenu {
   }
 }
 
-/***/ }),
-
-/***/ "./src/js/modules/slider.js":
-/*!**********************************!*\
-  !*** ./src/js/modules/slider.js ***!
-  \**********************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Slider)
-/* harmony export */ });
-/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
-
-class Slider {
-  constructor(selector) {
-    this.slider = document.querySelector(selector);
-    // this.slider.classList.add('glide');
-
-    const slider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](this.slider, {
-      type: 'carousel',
-      perView: 1
-    });
-    console.log(slider);
-  }
-}
-
 /***/ })
 
 /******/ 	});
@@ -4072,13 +4045,43 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mobile_menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/mobile-menu.js */ "./src/js/modules/mobile-menu.js");
 /* harmony import */ var _modules_desktop_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/desktop-menu.js */ "./src/js/modules/desktop-menu.js");
-/* harmony import */ var _modules_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider.js */ "./src/js/modules/slider.js");
+/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
 
 
 
 const _mobileMenu = new _modules_mobile_menu_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
 const _desktopMenu = new _modules_desktop_menu_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
-const _typeSlider = new _modules_slider_js__WEBPACK_IMPORTED_MODULE_2__["default"]('#type-slider');
+// const _typeSlider = new Slider('#type-slider');
+
+if (window.innerWidth <= 600) {
+  // const swiper = new Swiper(`.swiper`, {
+  //   spaceBetween: 30,
+  //   pagination: {
+  //     el: `.swiper-pagination`,
+  //   },
+  //   modules: [Navigation, Pagination],
+  //   // modules: [Pagination],
+  //   // createElements: true,
+  // })
+
+  const slider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_2__["default"](`.glide`, {
+    type: `carousel`,
+    perView: 1,
+    animationTimingFunc: `ease-in-out`,
+    focusAt: `center`,
+    autoplay: 2000,
+    // breakpoints: {
+    //   600: {
+    //     perView: 1,
+    //   },
+    //   1000: {
+    //     perView: 2,
+    //     gap: 10,
+    //   }
+    // },
+    gap: 20
+  }).mount();
+}
 })();
 
 /******/ })()
