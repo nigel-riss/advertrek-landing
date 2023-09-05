@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="style.css?v=3")
+    script(src="./scroll.js?v=3") 
+
+    include ./modules/favicon.pug
+
+    title Advertrek LTD — Privacy Policy
+  body 
+    include ./modules/_header-privacy.pug
+
+    main
+      include ./modules/_privacy-content.pug
+
+    include ./modules/footer-inner.pug
+
+    script(src="./app.js?v=3") 
