@@ -74,12 +74,13 @@
   display: block;
 
   // visual
-  background-image: conic-gradient(from 26deg at 50% -10%,
-    #FF3B77 10%,
+  // background-image: conic-gradient(from 26deg at 50% -10%,
+  background-image: linear-gradient(-45deg,
+    #ff3b77 0%,
     #ff3b77 30%,
-    // #FFDBF0 40%,
-    #1f3281 50%,
-    #1F3281 80%
+    #ff3b7788 40%,
+    #1f3281 70%,
+    #1F3281 100%
   );
   overflow: hidden;
   transition: all 1s ease-out;
