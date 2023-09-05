@@ -7,8 +7,14 @@
   margin-bottom: 1.5rem;
   padding: 1.75rem;
 
+  // border
+  border-radius: 1.5rem;
+
   // typography
   color: var(--blue);
+
+  // visual
+  overflow: hidden;
 
   @include atTablet {
     // box model
@@ -58,21 +64,25 @@
 
   // positioning
   position: absolute;
-  top: -2px;
-  right: -2px;
-  bottom: -2px;
-  left: -2px;
+  top: -25%;
+  right: -25%;
+  bottom: -25%;
+  left: -25%;
   z-index: -2;
 
   // box model
   display: block;
 
-  // border
-  border-radius: 1.5rem;
-
   // visual
-  background-image: conic-gradient(from 26deg at 50% -10%, #FFDBF0 0%, #FF3B77 10%, #1F3281 57%);
+  background-image: conic-gradient(from 26deg at 50% -10%,
+    #FF3B77 10%,
+    #ff3b77 30%,
+    // #FFDBF0 40%,
+    #1f3281 50%,
+    #1F3281 80%
+  );
   overflow: hidden;
+  transition: all 1s ease-out;
 }
 
 .gradient-card::after {
@@ -80,10 +90,10 @@
 
   // positioning
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
   z-index: -1;
 
   // box model
@@ -95,6 +105,13 @@
   // visual
   background-color: var(--lightBlue);
   overflow: hidden;
+}
+
+.gradient-card:hover::before {
+  @include atDesktopS {
+    // positioning
+    transform: rotate(180deg);
+  }
 }
 
 .gradient-card__number {

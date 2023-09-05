@@ -827,7 +827,9 @@ ul.main-menu {
   z-index: 2;
   margin-bottom: 1.5rem;
   padding: 1.75rem;
+  border-radius: 1.5rem;
   color: var(--blue);
+  overflow: hidden;
 }
 @media (min-width: 600px) {
   .gradient-card {
@@ -865,29 +867,35 @@ ul.main-menu {
 .gradient-card::before {
   content: "";
   position: absolute;
-  top: -2px;
-  right: -2px;
-  bottom: -2px;
-  left: -2px;
+  top: -25%;
+  right: -25%;
+  bottom: -25%;
+  left: -25%;
   z-index: -2;
   display: block;
-  border-radius: 1.5rem;
-  background-image: conic-gradient(from 26deg at 50% -10%, #FFDBF0 0%, #FF3B77 10%, #1F3281 57%);
+  background-image: conic-gradient(from 26deg at 50% -10%, #FF3B77 10%, #ff3b77 30%, #1f3281 50%, #1F3281 80%);
   overflow: hidden;
+  transition: all 1s ease-out;
 }
 
 .gradient-card::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
   z-index: -1;
   display: block;
   border-radius: calc(1.5rem - 2px);
   background-color: var(--lightBlue);
   overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+  .gradient-card:hover::before {
+    transform: rotate(180deg);
+  }
 }
 
 .gradient-card__number {
