@@ -1,0 +1,31 @@
+.policy {
+  // box model
+  margin-bottom: 8rem;
+  margin-top: -4rem;
+  padding: 1.25rem;
+
+  h2 {
+    // box model
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    // typography
+    color: var(--blue);
+    font-family: var(--titleFont);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  p {
+    b {
+      // typography
+      font-family: var(--titleFont);
+      font-weight: 500;
+    }
+
+    a {
+      // typography
+      color: var(--blue);
+    }
+  }
+}
