@@ -23,6 +23,60 @@
     // box model
     margin-bottom: 0;
   }
+
+  @include atDesktopS {
+    // positioning
+    overflow: hidden;
+  }
+}
+
+// .type-card:hover {
+//   @include atDesktopS {
+//     @media (hover: hover) {
+//       // positioning
+//       background-color: var(--red);
+//       transform: rotateY(90deg);
+//     }
+//   }
+// }
+
+.type-card::before {
+  @include atDesktopS {
+    content: "";
+
+    // positioning
+    position: absolute;
+    top: -20%;
+    left: -100%;
+    transform: rotate(45deg);
+
+    // box model
+    height: 60rem;
+
+    // visual
+    box-shadow: 0 0 100px 40px #ffffff88;
+    transition: .7s all;
+  }
+}
+
+.type-card:hover::before {
+  @include atDesktopS {
+    // positioning
+    top: -100%;
+    left: 200%;
+
+    // visual
+    // filter: brightness(.5);
+  }
+}
+
+.type-card:hover .type-card__image {
+  @include atDesktopS {
+    // positioning
+    // transform: rotateY(10deg);
+    // transform: translate(0, -0.5rem);
+    transform: scale(1.125);
+  }
 }
 
 .type-card:nth-of-type(2n) {
@@ -52,6 +106,12 @@
 
   // box model
   width: 8rem;
+
+  @include atDesktopS {
+    // positioning
+    transition: all 0.5s ease-out;
+    // transform: translate(0, -0.125rem);
+  }
 }
 
 // .type-card__image::before {
@@ -78,7 +138,8 @@
 // }
 
 .type-card__image img {
-
+  // box model
+  width: 100%;
 }
 
 .type-card__content {
