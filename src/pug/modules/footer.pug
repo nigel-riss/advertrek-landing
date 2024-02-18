@@ -26,7 +26,10 @@ footer.footer
         a.social(href="#") Telegram 
           img(src="./img/icons/telegram.svg", alt="Telegram Icon")
   .footer__bottom
-    p.footer__copy Copyright © 2023 <br/>All Rights Reserved
+    p.footer__copy
+      | Copyright © 
+      | <script>document.write(new Date().getFullYear())</script>
+      | <br/>All Rights Reserved
     .footer__menu
       ul.footer-menu.footer-menu--d-row 
         li.footer-menu__item 
